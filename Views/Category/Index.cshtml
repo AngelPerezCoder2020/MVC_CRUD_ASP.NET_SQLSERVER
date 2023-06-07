@@ -1,0 +1,45 @@
+﻿@model List<PracticasCRUD.Models.Category>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Listado Categorias</title>
+    </head>
+    <body>
+        <h1>CATEGORIAS</h1>
+        <br />
+        <a class="btn btn-primary" href="@Url.Action("Nuevo","Category")">NUEVO</a>
+        <div>
+            <table class="table">
+                <tr>
+                    <th>
+                        CategoryID
+                    </th>
+                    <th>
+                        CategoryName
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+                @foreach (var c in Model)
+                {
+                    <tr>
+                        <td>
+                            @c.CategoryID
+                        </td>
+                        <td>
+                            @c.CategoryName
+                        </td>
+                        <td>
+                            @c.Description
+                        </td>
+                        <td>
+                            <a class="btn btn-danger" href="@Url.Action("Borrar", "Category", new { id = c.CategoryID})">ELIMINAR</a>
+                            <a class="btn btn-primary" href="@Url.Action("Editar", "Category",c)">ACTUALIZAR</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </body>
+</html>

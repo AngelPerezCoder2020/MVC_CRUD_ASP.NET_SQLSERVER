@@ -1,0 +1,29 @@
+﻿@model PracticasCRUD.Models.Category
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Editar Categoria</title>
+    </head>
+    <body>
+        <h1>Editar Categoria</h1>
+        <br />
+        <div>
+            <form action="@Url.Action("Editar2", "Category")" method="post">
+                <div>
+                    <input class="form-control" type="hidden" name="CategoryID" value="@Model.CategoryID" />
+                </div>
+                <div>
+                    <label>CategoryName</label>
+                    <input class="form-control" type="text" name="CategoryName" value="@Model.CategoryName"/>
+                </div>
+                <div>
+                    <label>Descripcion</label>
+                    <input class="form-control" type="text" name="Description" value="@Model.Description"/>
+                </div>
+                <br />
+                <button type="submit" class="btn btn-primary">GUARDAR</button>
+                <a href="@Url.Action("Index","Category")">REGRESAR</a>
+            </form>
+        </div>
+    </body>
+</html>

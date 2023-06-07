@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Categoria</title>
+</head>
+<body>
+    <h1>Editar Categoria</h1>
+    <br />
+    <div>
+        <form action="@Url.Action("Nuevo2", "Category")" method="post">
+            <div>
+                <label>CategoryName</label>
+                <input class="form-control" type="text" name="CategoryName" />
+            </div>
+            <div>
+                <label>Descripcion</label>
+                <input class="form-control" type="text" name="Description" />
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">GUARDAR</button>
+            <a href="@Url.Action("Index","Category")">REGRESAR</a>
+        </form>
+    </div>
+</body>
+</html>
